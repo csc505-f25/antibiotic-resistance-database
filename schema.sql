@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS drug_classes (
 CREATE TABLE IF NOT EXISTS antibiotics (
     antibiotic_id SERIAL PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
-    drug_class_id SERIAL REFERENCES drug_classes (drug_class_id),
+    drug_class_id INT REFERENCES drug_classes (drug_class_id),
     atc_code VARCHAR(255),
     notes TEXT
 );

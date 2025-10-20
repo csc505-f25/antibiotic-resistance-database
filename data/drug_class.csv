@@ -1,0 +1,4 @@
+drug_class_id,name,description
+1,Tetracyclines,"Broad-spectrum antibiotics used against Gram-positive and Gram-negative bacteria."
+2,Amphenicols,"Broad-spectrum antibiotics; chloramphenicol and derivatives."
+3,Penicillins (extended spectrum),"Beta-lactam antibiotics active against Gram-positive and some Gram-negative organisms."
