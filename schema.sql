@@ -82,3 +82,9 @@ CREATE TABLE IF NOT EXISTS resistance_profiles (
     year INT,
     region VARCHAR(255)
 );
+
+# Add indexes for efficient querying
+CREATE INDEX idx_org ON ResistanceProfiles (organism_id);
+CREATE INDEX idx_antibiotic ON ResistanceProfiles (antibiotic_id);
+CREATE INDEX idx_region ON ResistanceProfiles (region);
+CREATE INDEX idx_year ON ResistanceProfiles (year);
