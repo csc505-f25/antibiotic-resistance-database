@@ -1,0 +1,5 @@
+python>=3.8
+pandas>=2.0
+SQLAlchemy>=2.0
+biopython>=1.81
+tqdm>=4.0
