@@ -22,7 +22,7 @@ CREATE TABLE IF NOT EXISTS organisms (
 
 -- Drug Classes
 CREATE TABLE IF NOT EXISTS drug_classes (
-    drug_class_id SERIAL PRIMARY KEY,
+    drug_class_id TEXT PRIMARY KEY,
     name VARCHAR(255) NOT NULL,
     description TEXT
 );
