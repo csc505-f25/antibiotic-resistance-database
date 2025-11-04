@@ -45,14 +45,14 @@ CREATE TABLE IF NOT EXISTS gene_families (
 
 -- Resistance Mechanisms
 CREATE TABLE IF NOT EXISTS resistance_mechanisms (
-    mechanism_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    resistance_mechanism_id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
     description TEXT
 );
 
 -- Resistance Genes
 CREATE TABLE IF NOT EXISTS resistance_genes (
-    gene_id INTEGER PRIMARY KEY AUTOINCREMENT,
+    resistance_gene_id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT,
     family_id INTEGER,
     mechanism_id INTEGER,
@@ -76,7 +76,7 @@ CREATE TABLE IF NOT EXISTS resistance_profiles (
     profile_id INTEGER PRIMARY KEY AUTOINCREMENT,
     organism_id INTEGER,
     antibiotic_id INTEGER,
-    gene_id INTEGER,
+    resistance_gene_id INTEGER,
     mechanism_id INTEGER,
     mic_value REAL,
     mic_unit TEXT,
@@ -86,7 +86,7 @@ CREATE TABLE IF NOT EXISTS resistance_profiles (
     region TEXT,
     FOREIGN KEY (organism_id) REFERENCES organisms (organism_id),
     FOREIGN KEY (antibiotic_id) REFERENCES antibiotics (antibiotic_id),
-    FOREIGN KEY (gene_id) REFERENCES resistance_genes (gene_id),
+    FOREIGN KEY (resistance_gene_id) REFERENCES resistance_genes (resistance_gene_id),
     FOREIGN KEY (mechanism_id) REFERENCES resistance_mechanisms (mechanism_id),
     FOREIGN KEY (source_id) REFERENCES data_sources (source_id)
 );

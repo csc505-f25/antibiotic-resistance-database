@@ -11,7 +11,7 @@ ARO_ID,Gene,Organism,Antibiotics,Drug_Class,Resistance_Mechanism
 3002511,LRA-12,uncultured bacterium BLR12,,cephalosporin;penicillin beta-lactam,antibiotic inactivation
 3000938,TEM-72,Morganella morganii,ceftazidime;ampicillin,monobactam;cephalosporin;penicillin beta-lactam,antibiotic inactivation
 3000928,TEM-59,Klebsiella oxytoca,ceftazidime;ampicillin,monobactam;cephalosporin;penicillin beta-lactam,antibiotic inactivation
-3002320,KPC-10,Acinetobacter baumannii,,monobactam;carbapenem;cephalosporin;penicillin beta-lactam,antibiotic inactivation
+3002320,KPC-10,s baumannii,,monobactam;carbapenem;cephalosporin;penicillin beta-lactam,antibiotic inactivation
 3001711,OXA-212,Acinetobacter johnsonii,oxacillin,carbapenem;penicillin beta-lactam,antibiotic inactivation
 3002193,IMP-2,Acinetobacter baumannii,,carbapenem;cephalosporin;penicillin beta-lactam,antibiotic inactivation
 3002012,CMY-1,Klebsiella pneumoniae,,cephalosporin,antibiotic inactivation
@@ -6441,4 +6441,3 @@ ARO_ID,Gene,Organism,Antibiotics,Drug_Class,Resistance_Mechanism
 3002600,AAC(3)-Ib/AAC(6')-Ib3 bifunctional protein,Pseudomonas aeruginosa,astromicin;amikacin;sisomicin;kanamycin A;tobramycin;gentamicin,aminoglycoside antibiotic,antibiotic inactivation
 3003378,Escherichia coli AcrAB-TolC with MarR mutations conferring resistance to ciprofloxacin and tetracycline,Escherichia coli str. K-12 substr. MG1655,tigecycline;ciprofloxacin;tetracycline;rifampin;chloramphenicol;ampicillin;cefalotin;triclosan,fluoroquinolone antibiotic;cephalosporin;glycylcycline;penicillin beta-lactam;tetracycline antibiotic;rifamycin antibiotic;phenicol antibiotic;disinfecting agents and antiseptics,antibiotic target alteration;antibiotic efflux
 3003807,"Escherichia coli AcrAB-TolC with AcrR mutation conferring resistance to ciprofloxacin, tetracycline, and ceftazidime",Escherichia coli str. K-12 substr. MG1655,tigecycline;ciprofloxacin;tetracycline;ceftazidime;rifampin;chloramphenicol;ampicillin;cefalotin;triclosan,fluoroquinolone antibiotic;cephalosporin;glycylcycline;penicillin beta-lactam;tetracycline antibiotic;rifamycin antibiotic;phenicol antibiotic;disinfecting agents and antiseptics,antibiotic target alteration;antibiotic efflux
-,,,,,

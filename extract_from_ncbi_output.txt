@@ -1,0 +1,18 @@
+Not found: alkalihalobacillus clausii ksm-k16
+Not found: bacillus massiliigabonensis
+Not found: bacteria, viruses, fungi, and other genome sequence associated with antimicrobial resistance
+Not found: escherichia coli o139:h28 str. e24377a
+Not found: escherichia coli o157:h7 str. sakai
+Not found: escherichia coli o25b:h4
+Not found: escherichia coli str. k-12
+Not found: klebsiella variicola cag:634
+Not found: mycoplasma gallisepticum str. r(low)
+Not found: mycoplasma hominis
+Not found: mycoplasma pneumoniae
+Not found: pseudomonas oleovorans
+Not found: pseudomonas stutzeri
+Not found: rhodococcus fascians
+Not found: serratia sp.
+Not found: streptomyces coelicolor a3(2)
+Not found: vibrio parahaemolyticus o1:kuk str. fda_r31
+Not found: yersinia enterocolitica (type o:8)

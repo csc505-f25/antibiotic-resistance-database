@@ -1,56 +1,44 @@
 from Bio import Entrez
-import time
-from tqdm import tqdm
 import csv
+import time
 
-# NCBI email (required)
+# Set your email (NCBI requires this)
 Entrez.email = "your_email@example.com"
 
-# Read bacteria list from a file (one name per line)
-bacteria_list = []
-with open("bacteria_list.txt", "r") as f:
-    for line in f:
-        name = line.strip()
-        if name:  # skip empty lines
-            bacteria_list.append(name)
-            
-# Function to fetch taxonomy data
-def fetch_taxonomy(bacterium):
-    try:
-        handle = Entrez.esearch(db="taxonomy", term=bacterium)
+# List of missing organisms
+
+with open("missing_bacteria.txt", "r") as f:
+    missing_organisms = [line.strip() for line in f if line.strip()]
+
+# Output CSV file
+output_file = "ncbi_missing_organisms.csv"
+
+# Open CSV and write header
+with open(output_file, "w", newline="") as csvfile:
+    writer = csv.writer(csvfile)
+    writer.writerow(["Name", "TaxID", "Rank", "Lineage", "Division"])
+
+    for org in missing_organisms:
+        # Search taxonomy
+        handle = Entrez.esearch(db="taxonomy", term=org)
         record = Entrez.read(handle)
         handle.close()
-        tax_id = record['IdList'][0] if record['IdList'] else None
-        if tax_id:
-            summary_handle = Entrez.efetch(db="taxonomy", id=tax_id)
-            summary = Entrez.read(summary_handle)
-            summary_handle.close()
-            return summary[0]
-        return None
-    except Exception as e:
-        print(f"Error fetching {bacterium}: {e}")
-        return None
+        time.sleep(0.3)  # polite delay for NCBI server
 
-# Fetch data for all bacteria
-bacteria_data = []
-for b in tqdm(bacteria_list, desc="Fetching bacteria taxonomy"):
-    data = fetch_taxonomy(b)
-    if data:
-        bacteria_data.append({
-            "name": b,
-            "tax_id": data.get("TaxId"),
-            "rank": data.get("Rank"),
-            "lineage": data.get("Lineage"),
-            "division": data.get("Division")
-        })
-    time.sleep(0.3)  # polite delay to avoid NCBI rate limits
+        if record["IdList"]:
+            tax_id = record["IdList"][0]
 
+            # Fetch taxonomy details
+            handle = Entrez.efetch(db="taxonomy", id=tax_id, retmode="xml")
+            tax_record = Entrez.read(handle)[0]
+            handle.close()
 
-# Save results to CSV
-csv_file = "bacteria_taxonomy.csv"
-with open(csv_file, "w", newline="", encoding="utf-8") as f:
-    writer = csv.DictWriter(f, fieldnames=["name", "tax_id", "rank", "lineage", "division"])
-    writer.writeheader()
-    writer.writerows(bacteria_data)
+            name = tax_record.get("ScientificName", "")
+            rank = tax_record.get("Rank", "")
+            lineage = tax_record.get("Lineage", "")
+            division = tax_record.get("Division", "")
 
-print(f"Results saved to {csv_file}")
+            writer.writerow([name, tax_id, rank, lineage, division])
+        else:
+            writer.writerow([org, "NOT FOUND", "", "", ""])
+            print(f"Not found: {org}")

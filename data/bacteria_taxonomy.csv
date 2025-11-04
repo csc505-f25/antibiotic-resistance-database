@@ -3,15 +3,23 @@ Abiotrophia defectiva,46125,species,cellular organisms; Bacteria; Bacillati; Bac
 Abiotrophia para-adiacens,191553,species,cellular organisms; Bacteria; Bacillati; Bacillota; Bacilli; Lactobacillales; Aerococcaceae; Abiotrophia,Bacteria
 Absiella tortuosum,39494,species,cellular organisms; Bacteria; Bacillati; Bacillota; Erysipelotrichia; Erysipelotrichales; Erysipelotrichaceae; Amedibacterium,Bacteria
 Acholeplasma laidlawii,2148,species,cellular organisms; Bacteria; Bacillati; Mycoplasmatota; Mollicutes; Acholeplasmatales; Acholeplasmataceae; Acholeplasma,Bacteria
+Achromobacter,222,genus,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae,Bacteria
 Achromobacter animicus,1389935,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter,Bacteria
 Achromobacter deleyi,1353891,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter,Bacteria
 Achromobacter denitrificans,32002,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter,Bacteria
+Achromobacter dolens,1287738,species, cellular organisms;Bacteria; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter,
 Achromobacter insolitus,217204,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter,Bacteria
+Achromobacter insuavis,1287735,species,Bacteria;Pseudomonadati;Pseudomonadota;Betaproteobacteria;Burkholderiales;Alcaligenaceae;Achromobacter;Achromobacter insuavis,Bacteria
+Achromobacter insuavis AXX-A,1003200,no rank,cellular organisms;Bacteria;Pseudomonadati;Pseudomonadota;Betaproteobacteria;Burkholderiales;Alcaligenaceae;Achromobacter;Achromobacter insuavis AXX-A,Bacteria
 Achromobacter marplatensis,470868,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter,Bacteria
 Achromobacter mucicolens,1389922,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter,Bacteria
 Achromobacter piechaudii,72556,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter,Bacteria
 Achromobacter pulmonis,1389932,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter,Bacteria
 Achromobacter ruhlandii,72557,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter,Bacteria
+Achromobacter sp.,134375,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter; unclassified Achromobacter
+Achromobacter sp. 2015clin2ach,1707589,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter; unclassified Achromobacter,Bacteria
+Achromobacter sp. 2015clin4ach,1707590,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter; unclassified Achromobacter,Bacteria
+Achromobacter sp. sallbros1,944673,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter; unclassified Achromobacter,Bacteria
 Achromobacter spanius,217203,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter,Bacteria
 Achromobacter xylosoxidans,85698,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter,Bacteria
 Acidaminococcus fermentans,905,species,cellular organisms; Bacteria; Bacillati; Bacillota; Negativicutes; Acidaminococcales; Acidaminococcaceae; Acidaminococcus,Bacteria
@@ -23,7 +31,9 @@ Acidovorax avenae,80867,species,cellular organisms; Bacteria; Pseudomonadati; Ps
 Acidovorax delafieldii,47920,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Comamonadaceae; Acidovorax,Bacteria
 Acidovorax facilis,12917,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Comamonadaceae; Acidovorax,Bacteria
 Acidovorax temperans,80878,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Comamonadaceae; Acidovorax,Bacteria
+Acinetobacter,2839056,species group,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter,Bacteria
 Acinetobacter baumannii,470,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter; Acinetobacter calcoaceticus/baumannii complex,Bacteria
+Acinetobacter baumannii 1552865,1310679,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter; Acinetobacter calcoaceticus/baumannii complex; Acinetobacter baumannii,Bacteria
 Acinetobacter baylyi,202950,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter,Bacteria
 Acinetobacter beijerinckii,262668,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter,Bacteria
 Acinetobacter bereziniae,106648,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter,Bacteria
