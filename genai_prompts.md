@@ -55,3 +55,23 @@ Chat GPT gave me code formatted as a section of a csv file with "antibiotic_id,n
 ### Prompt 5
 Give me a step by step on how to complete my goals for week 6 & 7
 Build a Python query engine and a simple dashboard prototype. Steps taken: 1. Set up DB connection with SQLAlchemy (or sqlite3/postgres) and a `run_query` helper. 2. Implemented a reusable function `get_resistance_data(organism, antibiotic, region)` that composes parameterized SQL and returns results. 3. Added filters for `organism`, `antibiotic`, and `region` in the query layer and tested example queries. 4. Created a Streamlit prototype (`app.py`) with input controls, a table view of query results, and a basic chart (bar chart of resistance levels). 5. Iterated by replacing text inputs with dropdowns populated from the database, caching query results, and adding year/MIC visualizations as time permitted. 6. Tracked work in GitHub issues (query engine, filters, dashboard, visuals) and committed code to the repo.
+
+### Prompt 5
+What files (in the CARD database) do I need for what table (ChatGPT was given my dattabase scheme)
+You need to populate
+* resistance_mechanisms
+* resistance_genes
+* gene_families
+* resistance_profiles
+Files to use from CARD
+* aro_index.tsv
+    * ARO Accession --> 
+    * Name
+    * Model Type
+    * Protein Families
+* aro_categories.tsv
+    * gene_famiiles
+    * resistance_mechanism
+* model_information.tsv
+    * sequence_accession --> resistance_genes
+    * notes --> resistance_genes

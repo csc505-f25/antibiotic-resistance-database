@@ -1,0 +1,5 @@
+family_id, name, description
+3000341,AAC(2'),A category of aminoglycoside N-acetyltransferase enzymes with modification regiospecificity based at the 2'-amino group of the respective antibiotic. These enzymes inactivate aminoglycoside antibiotics through acetylation of the 2-amino group of the compound.
+3000322,AAC(3'),A category of aminoglycoside N-acetyltransferase enzymes with modification regiospecificity based at the 3-amino group of the respective antibiotic. These enzymes inactivate aminoglycoside antibiotics through acetylation of the 3-amino group of the compound.
+3000345,AAC(6'),A category of aminoglycoside N-acetyltransferase enzymes with modification regiospecificity based at the 6'-amino group of the respective antibiotic. These enzymes inactivate aminoglycoside antibiotics through acetylation of the 6-amino group of the compound.
+3007879,RSD 1,RSD1 is a family of class D beta-lactamases which confer resistance to beta-lactam antibiotics.

@@ -16,7 +16,7 @@ CREATE TABLE IF NOT EXISTS organisms (
     name TEXT NOT NULL,
     taxonomy_id INTEGER,
     strain TEXT,
-    gram_strain TEXT,
+    gram_stain TEXT,
     notes TEXT
 );
 
@@ -31,7 +31,7 @@ CREATE TABLE IF NOT EXISTS drug_classes (
 CREATE TABLE IF NOT EXISTS antibiotics (
     antibiotic_id INTEGER PRIMARY KEY AUTOINCREMENT,
     name TEXT NOT NULL,
-    drug_class_id INTEGER,
+    drug_class_id TEXT,
     atc_code TEXT,
     notes TEXT,
     FOREIGN KEY (drug_class_id) REFERENCES drug_classes (drug_class_id)
