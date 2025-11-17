@@ -14,7 +14,7 @@ region = st.text_input("Region")
 # Query
 query = """
 SELECT o.name as Organism, a.name as Antibiotic, r.Region, r.Year, r.Resistance_Level, r.MIC_Value
-FROM ResistanceProfiles r
+FROM resistance_profiles r
 JOIN Organisms o ON r.organism_id = o.organism_id
 JOIN Antibiotics a ON r.antibiotic_id = a.antibiotic_id
 WHERE 1=1

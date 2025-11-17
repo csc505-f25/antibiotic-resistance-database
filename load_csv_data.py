@@ -14,13 +14,17 @@ if missing:
 antibiotics_csv = "data/antibiotics.csv"
 bacteria_csv = "data/bacteria_taxonomy.csv"
 drug_classes_csv = "data/drug_classes.csv"
+gene_families_csv = "data/gene_families.csv"
 resistance_csv = "data/card-data/card_flat.csv"
+resistance_profile_csv = "data/resistance_profiles.tsv"
 
 # Load CSVs
 df_antibiotics = pd.read_csv(antibiotics_csv)
 df_bacteria = pd.read_csv(bacteria_csv)
 df_drug_classes = pd.read_csv(drug_classes_csv)
+df_gene_families = pd.read_csv(gene_families_csv)
 df_resistance = pd.read_csv(resistance_csv)
+df_resistance_profiles = pd.read_csv(resistance_profile_csv, sep='\t')
 
 # === Base tables ===
 df_drug_classes.to_sql("drug_classes", con=engine, if_exists="replace", index=False)
