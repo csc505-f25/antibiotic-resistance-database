@@ -17,7 +17,7 @@ organism_id,name,taxonomy_id,rank,lineage
 0016,Achromobacter pulmonis,1389932,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter
 0017,Achromobacter ruhlandii,72557,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter
 0018,Achromobacter sp.,134375,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter; unclassified Achromobacter
-0019,Achromobacter sp. 2015clin2ach,1707589,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter; unclassified Achromobacter
+0019,Achromobacter sp. 2015clin2ach,1707589,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter; unclassified Achromobacter
 0020,Achromobacter sp. 2015clin4ach,1707590,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter; unclassified Achromobacter
 0021,Achromobacter sp. sallbros1,944673,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter; unclassified Achromobacter
 0022,Achromobacter spanius,217203,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Alcaligenaceae; Achromobacter
@@ -124,7 +124,7 @@ organism_id,name,taxonomy_id,rank,lineage
 0123,Acinetobacter sp. NIPH 542,1217688,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter; unclassified Acinetobacter
 0124,Acinetobacter sp. NIPH 758,1776742,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter
 0125,Acinetobacter sp. NIPH 817,520708,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter; unclassified Acinetobacter
-0126,Acinetobacter sp. enrichment culture clone 8407,1182652,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter; environmental samples,Environmental samples
+0126,Acinetobacter sp. enrichment culture clone 8407,1182652,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter; environmental samples
 0127,Acinetobacter tandoii DSM 14970 = CIP 107469,1120927,strain,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter; Acinetobacter tandoii
 0128,Acinetobacter ursingii,108980,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter
 0129,Acinetobacter variabilis,70346,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter
@@ -310,7 +310,7 @@ organism_id,name,taxonomy_id,rank,lineage
 0309,Asaia bogorensis,91915,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria; Acetobacterales; Acetobacteraceae; Asaia
 0310,Asaia lannaensis,415421,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria; Acetobacterales; Acetobacteraceae; Asaia
 0311,Asaia siamensis,110479,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria; Acetobacterales; Acetobacteraceae; Asaia
-0312,Aspergillus fumigatus Af293,330879,strain,cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Aspergillus; Aspergillus subgen. Fumigati; Aspergillus fumigatus,Plants and Fungi
+0312,Aspergillus fumigatus Af293,330879,strain,cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Ascomycota; saccharomyceta; Pezizomycotina; leotiomyceta; Eurotiomycetes; Eurotiomycetidae; Eurotiales; Aspergillaceae; Aspergillus; Aspergillus subgen. Fumigati; Aspergillus fumigatus
 0313,Atlantibacter hermannii,565,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Atlantibacter
 0314,Atopobium deltae,1393034,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Coriobacteriia; Coriobacteriales; Atopobiaceae; Atopobium
 0315,Atopobium minutum,1381,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Coriobacteriia; Coriobacteriales; Atopobiaceae; Atopobium
@@ -359,7 +359,7 @@ organism_id,name,taxonomy_id,rank,lineage
 0358,Bacteroides clarus,626929,species,cellular organisms; Bacteria; Pseudomonadati; FCB group; Bacteroidota/Chlorobiota group; Bacteroidota; Bacteroidia; Bacteroidales; Bacteroidaceae; Bacteroides
 0359,Bacteroides coagulans,46507,species,cellular organisms; Bacteria; Bacillati; Bacillota; Tissierellia; Tissierellia incertae sedis; Ezakiella
 0360,Bacteroides coprocola,310298,species,cellular organisms; Bacteria; Pseudomonadati; FCB group; Bacteroidota/Chlorobiota group; Bacteroidota; Bacteroidia; Bacteroidales; Bacteroidaceae; Phocaeicola
-0361,Bacteroides coprophilus,1006423,genus,cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Coleoptera; Polyphaga; Staphyliniformia; Staphylinoidea; Staphylinidae; Oxytelinae group; Oxytelinae,Invertebrates
+0361,Bacteroides coprophilus,1006423,genus,cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Coleoptera; Polyphaga; Staphyliniformia; Staphylinoidea; Staphylinidae; Oxytelinae group; Oxytelinae
 0362,Bacteroides coprosuis DSM 18011,679937,strain,cellular organisms; Bacteria; Pseudomonadati; FCB group; Bacteroidota/Chlorobiota group; Bacteroidota; Bacteroidia; Bacteroidales; Bacteroidaceae; Bacteroides; Bacteroides coprosuis
 0363,Bacteroides eggerthii,28111,species,cellular organisms; Bacteria; Pseudomonadati; FCB group; Bacteroidota/Chlorobiota group; Bacteroidota; Bacteroidia; Bacteroidales; Bacteroidaceae; Bacteroides
 0364,Bacteroides faecalis,2447885,species,cellular organisms; Bacteria; Pseudomonadati; FCB group; Bacteroidota/Chlorobiota group; Bacteroidota; Bacteroidia; Bacteroidales; Bacteroidaceae; Bacteroides
@@ -586,7 +586,7 @@ organism_id,name,taxonomy_id,rank,lineage
 0585,Cedecea davisae,158484,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Cedecea
 0586,Cedecea lapagei,158823,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Cedecea
 0587,Cedecea neteri,158822,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Cedecea
-0588,Cedecea sp 5,211102,species,cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Basidiomycota; Agaricomycotina; Tremellomycetes; Trichosporonales; Tetragoniomycetaceae; Takashimella; unclassified Takashimella,Plants and Fungi
+0588,Cedecea sp 5,211102,species,cellular organisms; Eukaryota; Opisthokonta; Fungi; Dikarya; Basidiomycota; Agaricomycotina; Tremellomycetes; Trichosporonales; Tetragoniomycetaceae; Takashimella; unclassified Takashimella
 0589,Cellulomonas denverensis,264297,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Micrococcales; Cellulomonadaceae; Cellulomonas
 0590,Cellulomonas hominis,156981,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Micrococcales; Cellulomonadaceae; Cellulomonas
 0591,Cellulomonas turbata,1713,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Micrococcales; Cellulomonadaceae; Oerskovia
@@ -602,7 +602,7 @@ organism_id,name,taxonomy_id,rank,lineage
 0601,Chlamydia psittaci 6BC,331636,strain,cellular organisms; Bacteria; Pseudomonadati; PVC group; Chlamydiota; Chlamydiia; Chlamydiales; Chlamydiaceae; Chlamydia/Chlamydophila group; Chlamydia; Chlamydia psittaci
 0602,Chlamydia trachomatis,813,species,cellular organisms; Bacteria; Pseudomonadati; PVC group; Chlamydiota; Chlamydiia; Chlamydiales; Chlamydiaceae; Chlamydia/Chlamydophila group; Chlamydia
 0603,Chlamydiae,204428,phylum,cellular organisms; Bacteria; Pseudomonadati; PVC group
-0604,Chlamydomonas reinhardtii,3055,species,cellular organisms; Eukaryota; Viridiplantae; Chlorophyta; core chlorophytes; Chlorophyceae; CS clade; Chlamydomonadales; Chlamydomonadaceae; Chlamydomonas,Plants and Fungi
+0604,Chlamydomonas reinhardtii,3055,species,cellular organisms; Eukaryota; Viridiplantae; Chlorophyta; core chlorophytes; Chlorophyceae; CS clade; Chlamydomonadales; Chlamydomonadaceae; Chlamydomonas
 0605,Christensenella hongkongensis,270498,species,cellular organisms; Bacteria; Bacillati; Bacillota; Clostridia; Christensenellales; Christensenellaceae; Christensenella
 0606,Christensenella intestinihominis,1851429,species,cellular organisms; Bacteria; Bacillati; Bacillota; Clostridia; Christensenellales; Christensenellaceae; Christensenella
 0607,Christensenella minuta,626937,species,cellular organisms; Bacteria; Bacillati; Bacillota; Clostridia; Christensenellales; Christensenellaceae; Christensenella
@@ -984,13 +984,13 @@ organism_id,name,taxonomy_id,rank,lineage
 0983,Escherichia,561,genus,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae
 0984,Escherichia albertii,208962,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia
 0985,Escherichia coli,562,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia
-0986,Escherichia coli O139:H28 str. E24377A,331111,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia; Escherichia coli; Escherichia coli O139:H28,Pseudomonadota
-0987,Escherichia coli O157:H7 str. Sakai,386585,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia; Escherichia coli; Escherichia coli O157:H7,Pseudomonadota
-0988,Escherichia coli O25b:H4,941280,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia; Escherichia coli,Pseudomonadota
+0986,Escherichia coli O139:H28 str. E24377A,331111,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia; Escherichia coli; Escherichia coli O139:H28
+0987,Escherichia coli O157:H7 str. Sakai,386585,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia; Escherichia coli; Escherichia coli O157:H7
+0988,Escherichia coli O25b:H4,941280,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia; Escherichia coli
 0989,Escherichia coli ATCC 25922,1322345,strain,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia; Escherichia coli
 0990,Escherichia coli CFT073,199310,strain,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia; Escherichia coli
 0991,Escherichia coli KTE14,1169333,strain,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia; Escherichia coli
-0992,Escherichia coli K-12,83333,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia; Escherichia coli,Pseudomonadota
+0992,Escherichia coli K-12,83333,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia; Escherichia coli
 0993,Escherichia coli str. K-12 substr. MC4100,1403831,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia; Escherichia coli; Escherichia coli K-12
 0994,Escherichia coli str. K-12 substr. MG1655,511145,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia; Escherichia coli; Escherichia coli K-12
 0995,Escherichia coli str. K-12 substr. W3110,316407,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Escherichia; Escherichia coli; Escherichia coli K-12
@@ -999,7 +999,7 @@ organism_id,name,taxonomy_id,rank,lineage
 0998,Eubacterium album,2978477,species,cellular organisms; Bacteria; Bacillati; Bacillota; Clostridia; Eubacteriales; Eubacteriaceae; Eubacterium
 0999,Eubacterium brachy,35517,species,cellular organisms; Bacteria; Bacillati; Bacillota; Clostridia; Peptostreptococcales; Anaerovoracaceae; unclassified Anaerovoracaceae Incertae Sedis
 1000,Eubacterium callanderi,53442,species,cellular organisms; Bacteria; Bacillati; Bacillota; Clostridia; Eubacteriales; Eubacteriaceae; Eubacterium
-1001,Eubacterium cylindroides,2612929,genus,cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Coleoptera; Polyphaga; Cucujiformia; Curculionoidea; Anthribidae; Anthribidae incertae sedis,Invertebrates
+1001,Eubacterium cylindroides,2612929,genus,cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Protostomia; Ecdysozoa; Panarthropoda; Arthropoda; Mandibulata; Pancrustacea; Hexapoda; Insecta; Dicondylia; Pterygota; Neoptera; Endopterygota; Coleoptera; Polyphaga; Cucujiformia; Curculionoidea; Anthribidae; Anthribidae incertae sedis
 1002,Eubacterium eligens,39485,species,cellular organisms; Bacteria; Bacillati; Bacillota; Clostridia; Lachnospirales; Lachnospiraceae; Lachnospira
 1003,Eubacterium limosum,1736,species,cellular organisms; Bacteria; Bacillati; Bacillota; Clostridia; Eubacteriales; Eubacteriaceae; Eubacterium
 1004,Eubacterium minutum,76124,species,cellular organisms; Bacteria; Bacillati; Bacillota; Clostridia; Peptostreptococcales; Anaerovoracaceae; unclassified Anaerovoracaceae Incertae Sedis
@@ -1476,7 +1476,7 @@ organism_id,name,taxonomy_id,rank,lineage
 1475,Mycolicibacterium smegmatis MC2 155,246196,strain,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales; Mycobacteriaceae; Mycolicibacterium; Mycolicibacterium smegmatis
 1476,Mycoplasma amphoriforme,273136,species,cellular organisms; Bacteria; Bacillati; Mycoplasmatota; Mollicutes; Mycoplasmatales; Mycoplasmataceae; Mycoplasma
 1477,Mycoplasma arginini,2094,species,cellular organisms; Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Metamycoplasmataceae; Mycoplasmopsis
-1478,Mycoplasma felis,9682,genus,cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Sarcopterygii; Dipnotetrapodomorpha; Tetrapoda; Amniota; Mammalia; Theria; Eutheria; Boreoeutheria; Laurasiatheria; Carnivora; Feliformia; Felidae; Felinae,Mammals
+1478,Mycoplasma felis,9682,genus,cellular organisms; Eukaryota; Opisthokonta; Metazoa; Eumetazoa; Bilateria; Deuterostomia; Chordata; Craniata; Vertebrata; Gnathostomata; Teleostomi; Euteleostomi; Sarcopterygii; Dipnotetrapodomorpha; Tetrapoda; Amniota; Mammalia; Theria; Eutheria; Boreoeutheria; Laurasiatheria; Carnivora; Feliformia; Felidae; Felinae
 1479,Mycoplasma fermentans,2115,species,cellular organisms; Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Metamycoplasmataceae; Mycoplasmopsis
 1480,Mycoplasma hominis,347256,strain,cellular organisms; Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Metamycoplasmataceae; Metamycoplasma; Metamycoplasma hominis
 1481,Mycoplasma penetrans,28227,species,cellular organisms; Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae; Malacoplasma
@@ -1873,7 +1873,7 @@ organism_id,name,taxonomy_id,rank,lineage
 1872,Pseudomonas soli,1306993,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas
 1873,Pseudomonas sp.,306,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas; unclassified Pseudomonas
 1874,Pseudomonas sp. BF61,2741068,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas; unclassified Pseudomonas
-1875,pseudomonas stutzeri,316,species; Pseudomonadota; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Stutzerimonas
+1875,pseudomonas stutzeri,316,species,ellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Stutzerimonas; Stutzerimonas stutzeri group; Stutzerimonas stutzeri subgroup
 1876,Pseudomonas syringae,317,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas; Pseudomonas syringae group; Pseudomonas syringae group genomosp. 1
 1877,Pseudomonas thomasii,105219,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Burkholderiaceae; Ralstonia
 1878,Pseudomonas tohonis,2725477,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Pseudomonadales; Pseudomonadaceae; Pseudomonas
@@ -1911,7 +1911,7 @@ organism_id,name,taxonomy_id,rank,lineage
 1910,Rhizobium radiobacter,362,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria; Hyphomicrobiales; Rhizobiaceae; Rhizobium/Agrobacterium group; Agrobacterium; Agrobacterium tumefaciens complex
 1911,Rhodobacter capsulatus,1061,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Alphaproteobacteria; Rhodobacterales; Rhodobacter group; Rhodobacter
 1912,Rhodococcus erythropolis,1833,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales; Nocardiaceae; Rhodococcus; Rhodococcus erythropolis group
-1913,Rhodococcus fascians,1828,species; Actinomycetota; Actinomycetia; Mycobacteriales; Nocardiaceae; Rhodococcoides
+1913,Rhodococcus fascians,1828,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales; Nocardiaceae; Rhodococcoides
 1914,Rhodococcus globerulus,33008,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales; Nocardiaceae; Rhodococcus
 1915,Rhodococcus gordoniae,223392,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales; Nocardiaceae; Rhodococcus
 1916,Rhodococcus rhodnii,38312,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales; Nocardiaceae; Rhodococcus
@@ -1996,7 +1996,7 @@ organism_id,name,taxonomy_id,rank,lineage
 1995,Scardovia inopinata,78259,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Bifidobacteriales; Bifidobacteriaceae; Scardovia
 1996,Scardovia wiggsiae,230143,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Bifidobacteriales; Bifidobacteriaceae; Scardovia
 1997,Scatolibacter rhodanostii,2014781,species,cellular organisms; Bacteria; Bacillati; Bacillota; Clostridia; Eubacteriales; Oscillospiraceae; Scatolibacter
-1998,Sediment metagenome,749907,species,unclassified entries; unclassified sequences; metagenomes; ecological metagenomes,metagenomes
+1998,Sediment metagenome,749907,species,unclassified entries; unclassified sequences; metagenomes; ecological metagenomes
 1999,Sedimentibacter hongkongensis,178338,species,cellular organisms; Bacteria; Bacillati; Bacillota; Tissierellia; Tissierellia incertae sedis; Sedimentibacter
 2000,Segatella baroniae F0067,1115809,strain,cellular organisms; Bacteria; Pseudomonadati; FCB group; Bacteroidota/Chlorobiota group; Bacteroidota; Bacteroidia; Bacteroidales; Prevotellaceae; Segatella; Segatella baroniae
 2001,Selenobaculum gbiensis,3054208,species,cellular organisms; Bacteria; Bacillati; Bacillota; Negativicutes; Selenomonadales; Selenomonadaceae; Selenobaculum
@@ -2016,7 +2016,7 @@ organism_id,name,taxonomy_id,rank,lineage
 2015,Serratia plymuthica,82996,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Yersiniaceae; Serratia
 2016,Serratia rubidaea,61652,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Yersiniaceae; Serratia
 2017,Serratia sarumanii,3020826,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Yersiniaceae; Serratia
-2018,Serratia sp.,616,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Yersiniaceae; Serratia; unclassified Serratia,enterobacteria
+2018,Serratia sp.,616,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Yersiniaceae; Serratia; unclassified Serratia
 2019,Serratia sp. FS14,1327989,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Yersiniaceae; Serratia; unclassified Serratia (in: enterobacteria)
 2020,Serratia ureilytica,300181,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Yersiniaceae; Serratia
 2021,Shewanella,22,genus,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Alteromonadales; Shewanellaceae
@@ -2224,7 +2224,7 @@ organism_id,name,taxonomy_id,rank,lineage
 2223,Streptomyces bikiniensis,1896,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Kitasatosporales; Streptomycetaceae; Streptomyces
 2224,Streptomyces cacaoi,1898,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Kitasatosporales; Streptomycetaceae; Streptomyces
 2225,Streptomyces cinnamoneus,53446,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Kitasatosporales; Streptomycetaceae; Streptomyces; Streptomyces cinnamoneus group
-2226,Streptomyces coelicolor A3(2),100226,no rank,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Kitasatosporales; Streptomycetaceae; Streptomyces; Streptomyces albidoflavus group; Streptomyces coelicolor,high G+C Gram-positive bacteria
+2226,Streptomyces coelicolor A3(2),100226,no rank,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Kitasatosporales; Streptomycetaceae; Streptomyces; Streptomyces albidoflavus group; Streptomyces coelicolor
 2227,Streptomyces fradiae,1906,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Kitasatosporales; Streptomycetaceae; Streptomyces
 2228,Streptomyces glaucescens,1907,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Kitasatosporales; Streptomycetaceae; Streptomyces
 2229,Streptomyces griseus,1911,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Kitasatosporales; Streptomycetaceae; Streptomyces; Streptomyces griseus group; Streptomyces griseus subgroup
@@ -2261,7 +2261,7 @@ organism_id,name,taxonomy_id,rank,lineage
 2260,Sutterella parvirubra,437898,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Sutterellaceae; Sutterella
 2261,Sutterella wadsworthensis,40545,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Betaproteobacteria; Burkholderiales; Sutterellaceae; Sutterella
 2262,Suttonella indologenes,13276,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Cardiobacteriales; Cardiobacteriaceae; Suttonella
-2263,Synthetic construct,32630,species,other entries; other sequences; artificial sequences,other sequences
+2263,Synthetic construct,32630,species,other entries; other sequences; artificial sequences
 2264,Tannerella forsythensis,28112,species,cellular organisms; Bacteria; Pseudomonadati; FCB group; Bacteroidota/Chlorobiota group; Bacteroidota; Bacteroidia; Bacteroidales; Tannerellaceae; Tannerella
 2265,Tannerella serpentiformis,712710,species,cellular organisms; Bacteria; Pseudomonadati; FCB group; Bacteroidota/Chlorobiota group; Bacteroidota; Bacteroidia; Bacteroidales; Tannerellaceae; Tannerella
 2266,Tatumella ptyseos,82987,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Erwiniaceae; Tatumella
@@ -2273,7 +2273,7 @@ organism_id,name,taxonomy_id,rank,lineage
 2272,Thermus thermophilus HB27,262724,strain,cellular organisms; Bacteria; Thermotogati; Deinococcota; Deinococci; Thermales; Thermaceae; Thermus; Thermus thermophilus
 2273,Tissierella praeacuta,43131,species,cellular organisms; Bacteria; Bacillati; Bacillota; Tissierellia; Tissierellales; Tissierellaceae; Tissierella
 2274,Trabulsiella guamensis,158852,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Enterobacteriaceae; Trabulsiella
-2275,Transposon Tn4551,2405,species,other entries; other sequences; transposons,Unassigned
+2275,Transposon Tn4551,2405,species,other entries; other sequences; transposons
 2276,Treponema amylovorum,59892,species,cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales; Treponemataceae; Treponema
 2277,Treponema denticola,158,species,cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales; Treponemataceae; Treponema
 2278,Treponema lecithinolyticum,53418,species,cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales; Treponemataceae; Treponema
@@ -2281,7 +2281,7 @@ organism_id,name,taxonomy_id,rank,lineage
 2280,Treponema medium,58231,species,cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales; Treponemataceae; Treponema
 2281,Treponema minutum,1653861,species,cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales; Treponemataceae; Treponema
 2282,Treponema pallidum,160,species,cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales; Treponemataceae; Treponema
-2283,Treponema pallidum subsp. pallidum,161,subspecies,cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales; Treponemataceae; Treponema; Treponema pallidum
+2283,Treponema pallidum subsp. pallidum,161,subspecies,cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales; Treponemataceae; Treponema; Treponema 
 2284,Treponema parvum,138851,species,cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales; Treponemataceae; Treponema
 2285,Treponema pectinovorum,164,species,cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales; Treponemataceae; Treponema
 2286,Treponema peruense,2787628,species,cellular organisms; Bacteria; Pseudomonadati; Spirochaetota; Spirochaetia; Spirochaetales; Treponemataceae; Treponema
@@ -2308,7 +2308,7 @@ organism_id,name,taxonomy_id,rank,lineage
 2307,Tsukamurella tyrosinosolvens,57704,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales; Tsukamurellaceae; Tsukamurella
 2308,Turicella otitidis,29321,species,cellular organisms; Bacteria; Bacillati; Actinomycetota; Actinomycetes; Mycobacteriales; Corynebacteriaceae; Corynebacterium
 2309,Turicibacter sanguinis,154288,species,cellular organisms; Bacteria; Bacillati; Bacillota; Erysipelotrichia; Erysipelotrichales; Turicibacteraceae; Turicibacter
-2310,Unclassified acinetobacter,196816,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacter,Pseudomonadota
+2310,Unclassified acinetobacter,196816,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Moraxellales; Moraxellaceae; Acinetobacte
 2311,Uncultured bacterium,77133,species,cellular organisms; Bacteria; environmental samples
 2312,Uncultured bacterium Ak20-3,798570,species,cellular organisms; Bacteria; environmental samples
 2313,Uncultured bacterium AOTet43,654983,species,cellular organisms; Bacteria; environmental samples
@@ -2327,7 +2327,7 @@ organism_id,name,taxonomy_id,rank,lineage
 2326,Uncultured bacterium BLR9,506525,species,cellular organisms; Bacteria; environmental samples
 2327,Uncultured bacterium IN-02,1805580,species,cellular organisms; Bacteria; environmental samples
 2328,Uncultured bacterium IN-14,1805592,species,cellular organisms; Bacteria; environmental samples
-2329,Uncultured organism,155900,species,unclassified entries; unclassified sequences; environmental samples,unclassified sequences
+2329,Uncultured organism,155900,species,unclassified entries; unclassified sequences; environmental samples
 2330,Ureaplasma parvum,134821,species,cellular organisms; Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae; Ureaplasma
 2331,Ureaplasma urealyticum,2130,species,cellular organisms; Bacteria; Bacillati; Mycoplasmatota; Mycoplasmoidales; Mycoplasmoidaceae; Ureaplasma
 2332,Vaginella massiliensis,1816680,species,cellular organisms; Bacteria; Pseudomonadati; FCB group; Bacteroidota/Chlorobiota group; Bacteroidota; Flavobacteriia; Flavobacteriales; Flavobacteriaceae; Vaginella
@@ -2371,7 +2371,7 @@ organism_id,name,taxonomy_id,rank,lineage
 2370,Vibrio navarrensis,29495,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales; Vibrionaceae; Vibrio
 2371,Vibrio paracholerae,650003,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales; Vibrionaceae; Vibrio
 2372,Vibrio parahaemolyticus,670,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales; Vibrionaceae; Vibrio; Vibrio harveyi group
-2373,Vibrio parahaemolyticus O1:Kuk str. FDA_R31,1338034,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales; Vibrionaceae; Vibrio; Vibrio harveyi group; Vibrio parahaemolyticus; Vibrio parahaemolyticus O1:Kuk,Gammaproteobacteria
+2373,Vibrio parahaemolyticus O1:Kuk str. FDA_R31,1338034,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales; Vibrionaceae; Vibrio; Vibrio harveyi group; Vibrio parahaemolyticus; Vibrio parahaemolyticus O1:Kuk
 2374,Vibrio parahaemolyticus RIMD 2210633,223926,strain,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales; Vibrionaceae; Vibrio; Vibrio harveyi group; Vibrio parahaemolyticus
 2375,Vibrio parahaemolyticus UCM-V493,1429044,strain,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales; Vibrionaceae; Vibrio; Vibrio harveyi group; Vibrio parahaemolyticus
 2376,Vibrio tarriae,2014742,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Vibrionales; Vibrionaceae; Vibrio
@@ -2397,7 +2397,7 @@ organism_id,name,taxonomy_id,rank,lineage
 2396,Yersinia canariae,2607663,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Yersiniaceae; Yersinia
 2397,Yersinia enterocolitica,630,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Yersiniaceae; Yersinia
 2398,Yersinia entomophaga,935293,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Yersiniaceae; Yersinia
-2399,Yersinia enterocolitica (type O:8),34054,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Yersiniaceae; Yersinia; Yersinia enterocolitica,Gammaproteobacteria
+2399,Yersinia enterocolitica (type O:8),34054,no rank,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Yersiniaceae; Yersinia; Yersinia enterocolitica
 2400,Yersinia frederiksenii,29484,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Yersiniaceae; Yersinia
 2401,Yersinia intermedia,631,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Yersiniaceae; Yersinia
 2402,Yersinia kristensenii,28152,species,cellular organisms; Bacteria; Pseudomonadati; Pseudomonadota; Gammaproteobacteria; Enterobacterales; Yersiniaceae; Yersinia
