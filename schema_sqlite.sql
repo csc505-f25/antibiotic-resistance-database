@@ -91,20 +91,8 @@ CREATE TABLE IF NOT EXISTS resistance_profiles (
     FOREIGN KEY (source_id) REFERENCES data_sources (source_id)
 );
 
-CREATE TABLE IF NOT EXISTS card_genes (
-    id INTEGER PRIMARY KEY AUTOINCREMENT,
-    Organism TEXT,
-    gene TEXT,
-    drug_class TEXT,
-    Antibiotic TEXT,
-    mechanism TEXT
-);
-
-
 -- Indexes
 CREATE INDEX idx_org ON resistance_profiles (organism_id);
 CREATE INDEX idx_antibiotic ON resistance_profiles (antibiotic_id);
 CREATE INDEX idx_region ON resistance_profiles (region);
 CREATE INDEX idx_year ON resistance_profiles (year);
-
-

@@ -24,34 +24,33 @@ with tab1:
     resistance_levels = ["All", "Susceptible", "Intermediate", "Resistant"]
     selected_resistance = st.radio("Resistance Level", resistance_levels, horizontal=True)
 
-    query = """
-    SELECT 
-        rp.scientific_name AS Organism,
-        rp.antibiotic AS Antibiotic,
-        rp.location AS Region,
-        rp.resistance_phenotype AS Resistance_Level,
-        rp.mic_mg_L AS MIC_Value,
-        rp.year AS Year
-    FROM resistance_profiles rp
 
-    LEFT JOIN organisms o ON rp.scientific_name = o.name
-    LEFT JOIN antibiotics ab ON rp.antibiotic = ab.name
+    query = """
+    SELECT rp.scientific_name AS Organism,
+       ab.name AS Antibiotic,
+       rp.location AS Region,
+       rp.resistance_phenotype AS Resistance_Level,
+       rp.mic_mg_L AS MIC_Value,
+       rp.create_date AS Year,
+       ab.notes AS Description
+    FROM resistance_profiles rp
+    LEFT JOIN antibiotics ab ON rp.antibiotic_id = ab.antibiotic_id
     WHERE 1=1
     """
 
     params = {}
 
     if organism:
-        query += " AND rp.scientific_name = :organism"
+        query += " AND scientific_name = :organism"
         params["organism"] = organism
     if antibiotic:
-        query += " AND rp.antibiotic = :antibiotic"
+        query += " AND antibiotic = :antibiotic"
         params["antibiotic"] = antibiotic
     if region:
-        query += " AND rp.location = :region"
+        query += " AND location = :region"
         params["region"] = region
     if selected_resistance != "All":
-        query += " AND rp.resistance_phenotype = :res_level"
+        query += " AND resistance_phenotype = :res_level"
         params["res_level"] = selected_resistance.lower()
 
     with engine.connect() as conn:
@@ -98,10 +97,10 @@ with tab2:
 
     query2 = """
     SELECT 
-        organism AS Organism,
+        Organism,
         gene,
         drug_class,
-        antibiotic AS Antibiotic,
+        Antibiotic,
         mechanism
     FROM card_genes
     WHERE 1=1
