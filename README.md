@@ -37,7 +37,24 @@ This dashboard allows users to:
 ## Installation
 
 1. **Clone the repository:**
-
 ```bash
 git clone https://github.com/csc505-f25/antibiotic-resistance-database.git
 cd antibiotic-resistance-database
+```
+
+2. **Insall the package locally:
+```bash
+pip install -e .
+```
+
+3. Install required dependencies if not already installed:
+```bash
+pip install streamlit pandas sqlalchemy streamlit-aggrid
+```
+
+## Running the App
+Run the Streamlit app with:
+```bash
+streamlit run amr_dashboard/app.py
+```
+Then open your browser at http://localhost:8501.
