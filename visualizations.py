@@ -135,7 +135,7 @@ def resistance_trends_by_antibiotic(df):
 # Pie chart of the different resistance mechanisms in CARD
 def card_mechanism_summary(df):
     st.subheader("Mechanism Distribution")
-    counts = df["mechanism"].value_counts().reset_index()
+    counts = df["Resistance_Mechanism"].value_counts().reset_index()
     counts.columns = ["mechanism", "count"]
 
     fig = px.pie(counts, names="mechanism", values="count", title="Mechanism Frequency")

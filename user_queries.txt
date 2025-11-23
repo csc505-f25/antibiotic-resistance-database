@@ -33,10 +33,3 @@ Filtering & UI
 
 "Find all records where the MIC value is missing."
 
-Error or edge-case testing
-
-"Search for a misspelled organism (e.g., Eschericia coli)."
-(tests fuzzy matching or error messaging)
-
-"Load the dashboard and navigate to the Resistance tab."
-(tests navigation flow)

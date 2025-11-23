@@ -24,16 +24,15 @@ with tab1:
     resistance_levels = ["All", "Susceptible", "Intermediate", "Resistant"]
     selected_resistance = st.radio("Resistance Level", resistance_levels, horizontal=True)
 
-
     query = """
-    SELECT rp.scientific_name AS Organism,
-       ab.name AS Antibiotic,
-       rp.location AS Region,
-       rp.resistance_phenotype AS Resistance_Level,
-       rp.mic_mg_L AS MIC_Value,
-       rp.create_date AS Year,
-       ab.notes AS Description
+    SELECT o.name AS Organism,
+        ab.name AS Antibiotic,
+        rp.region AS Region,
+        rp.resistance_level AS Resistance_Level,
+        rp.mic_value AS MIC_Value,
+        rp.year AS Year
     FROM resistance_profiles rp
+    LEFT JOIN organisms o ON rp.organism_id = o.organism_id
     LEFT JOIN antibiotics ab ON rp.antibiotic_id = ab.antibiotic_id
     WHERE 1=1
     """
@@ -41,16 +40,16 @@ with tab1:
     params = {}
 
     if organism:
-        query += " AND scientific_name = :organism"
+        query += " AND o.name = :organism"
         params["organism"] = organism
     if antibiotic:
-        query += " AND antibiotic = :antibiotic"
+        query += " AND ab.name = :antibiotic"
         params["antibiotic"] = antibiotic
     if region:
-        query += " AND location = :region"
+        query += " AND rp.region = :region"
         params["region"] = region
     if selected_resistance != "All":
-        query += " AND resistance_phenotype = :res_level"
+        query += " AND rp.resistance_level = :res_level"
         params["res_level"] = selected_resistance.lower()
 
     with engine.connect() as conn:
@@ -97,34 +96,39 @@ with tab2:
 
     query2 = """
     SELECT 
-        Organism,
-        gene,
-        drug_class,
-        Antibiotic,
-        mechanism
-    FROM card_genes
+        o.name AS Organism,
+        rg.name AS Gene,
+        dc.name AS Drug_Class,
+        ab.name AS Antibiotic,
+        rm.name AS Mechanism
+    FROM resistance_profiles rp
+    LEFT JOIN organisms o ON rp.organism_id = o.organism_id
+    LEFT JOIN resistance_genes rg ON rp.resistance_gene_id = rg.resistance_gene_id
+    LEFT JOIN resistance_mechanisms rm ON rp.resistance_mechanism_id = rm.resistance_mechanism_id
+    LEFT JOIN antibiotics ab ON rp.antibiotic_id = ab.antibiotic_id
+    LEFT JOIN drug_classes dc ON ab.drug_class_id = dc.drug_class_id
     WHERE 1=1
     """
 
     params2 = {}
 
     if organism2:
-        query2 += " AND Organism = :organism"
+        query2 += " AND o.name = :organism"
         params2["organism"] = organism2
 
     if mechanism2:
-        query2 += " AND mechanism = :mechanism"
+        query2 += " AND rm.name = :mechanism"
         params2["mechanism"] = mechanism2
 
     if gene2:
-        query2 += " AND Gene = :gene"
+        query2 += " AND rg.name = :gene"
         params2["gene"] = gene2
 
     with engine.connect() as conn:
         df2 = pd.read_sql(text(query2), conn, params=params2)
 
     st.subheader("Query Results")
-    st.dataframe(df2, use_container_width=True)
+    st.dataframe(df, width="stretch")
 
     if df2.empty:
         st.info("No CARD gene results found.")
