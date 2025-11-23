@@ -2,7 +2,7 @@ import sys
 from pathlib import Path
 import streamlit as st
 import pandas as pd
-from sqlalchemy import create_engine, text
+from sqlalchemy import create_engine, text, inspect
 import amr_dashboard.visualizations as viz
 from st_aggrid import AgGrid, GridOptionsBuilder
 
@@ -11,7 +11,7 @@ def main():
     sys.path.append(str(Path(__file__).resolve().parent.parent))
 
     #db_path = Path(__file__).parent / "amr.db"  # points to amr_dashboard/amr.db
-    engine = create_engine(f"sqlite:///data/amr.db")
+    engine = create_engine(f"sqlite:///amr_dashboard/amr.db")
 
     st.title("AMR Resistance Dashboard")
 
@@ -30,8 +30,13 @@ def main():
         resistance_levels = ["All", "susceptible", "intermediate", "resistant"]
         selected_resistance = st.radio("Resistance Level", resistance_levels, horizontal=True)
 
+        inspector = inspect(engine)
+        columns = inspector.get_columns("resistance_profiles")
+        for col in columns:
+            print(col["name"])
         query = """
-        SELECT scientific_name AS Organism,
+        SELECT
+            scientific_name AS Organism,
             antibiotic AS Antibiotic,
             location AS Region,
             resistance_phenotype AS Resistance_Level,
@@ -54,7 +59,8 @@ def main():
         if selected_resistance != "All":
             query += " AND resistance_phenotype = :res_level"
             params["res_level"] = selected_resistance
-
+                
+        
         with engine.connect() as conn:
             df = pd.read_sql(text(query), conn, params=params)
 

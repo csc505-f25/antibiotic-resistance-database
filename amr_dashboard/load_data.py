@@ -2,7 +2,7 @@ import pandas as pd
 from sqlalchemy import create_engine
 import re
 
-engine = create_engine("sqlite:///amr.db")
+engine = create_engine(f"sqlite:///amr_dashboard/amr.db")
 
 # === File paths ===
 card_csv = "data/card-data/card_flat.csv"
