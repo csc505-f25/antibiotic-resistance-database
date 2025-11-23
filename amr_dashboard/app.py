@@ -1,9 +1,13 @@
+import sys
+from pathlib import Path
+
+# Add the parent directory (antibiotic-resistance-database/) to Python’s module search path
+sys.path.append(str(Path(__file__).resolve().parent.parent))
 import streamlit as st
 import pandas as pd
 from sqlalchemy import create_engine, text
 import amr_dashboard.visualizations as viz
 from st_aggrid import AgGrid, GridOptionsBuilder
-from pathlib import Path
 
 
 db_path = Path(__file__).parent / "amr.db"  # points to amr_dashboard/amr.db
