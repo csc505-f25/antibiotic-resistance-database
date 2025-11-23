@@ -1,8 +1,15 @@
 import sqlite3
+from pathlib import Path
 
-conn = sqlite3.connect("amr.db")
-with open("schema_sqlite.sql") as f:
-    conn.executescript(f.read())
-conn.close()
+def main():
+    DB_PATH = Path(__file__).parent / "amr.db"
+    SCHEMA_PATH = Path(__file__).parent / "schema_sqlite.sql"
 
-print("✅ Database initialized and amr.db created successfully.")
+    if DB_PATH.exists():
+        print("Database already exists. Skipping creation.")
+        return
+
+    with sqlite3.connect(DB_PATH) as conn:
+        with open(SCHEMA_PATH, "r") as f:
+            conn.executescript(f.read())
+    print(f"✅ Database created at {DB_PATH}")
