@@ -10,8 +10,8 @@ def main():
     # Add the parent directory (antibiotic-resistance-database/) to Python’s module search path
     sys.path.append(str(Path(__file__).resolve().parent.parent))
 
-    db_path = Path(__file__).parent / "amr.db"  # points to amr_dashboard/amr.db
-    engine = create_engine(f"sqlite:///{db_path}")
+    #db_path = Path(__file__).parent / "amr.db"  # points to amr_dashboard/amr.db
+    engine = create_engine(f"sqlite:///data/amr.db")
 
     st.title("AMR Resistance Dashboard")
 
