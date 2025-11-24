@@ -10,10 +10,10 @@ ls
 set -e
 
 # Upgrade pip
-python3 -m pip install --upgrade pip
+python3.10 -m pip install --upgrade pip
 
 # Install required packages
-python3 -m pip install \
+python3.10 -m pip install \
     streamlit \
     pandas \
     sqlalchemy \
@@ -26,4 +26,4 @@ python3 -m pip install \
 echo "All required packages installed."
 
 # Run Streamlit app
-streamlit run streamlit_app.py
+python3.10 -m streamlit run streamlit_app.py

@@ -123,7 +123,7 @@ def phenotype_tab(engine):
         grid_options = gb.build()
         grid_response = AgGrid(df, gridOptions=grid_options, update_mode="MODEL_CHANGED")
         selected = grid_response['selected_rows']
-        if selected:
+        if isinstance(selected, list) and len(selected) > 0:
             desc = selected[0].get('Description')
             if desc:
                 st.info(desc)
@@ -215,7 +215,7 @@ def main():
             grid_options = gb.build()
             grid_response = AgGrid(df_pheno, gridOptions=grid_options, update_mode="MODEL_CHANGED")
             selected = grid_response['selected_rows']
-            if selected:
+            if isinstance(selected, list) and len(selected) > 0:
                 desc = selected[0].get('Description')
                 if desc:
                     st.info(desc)
