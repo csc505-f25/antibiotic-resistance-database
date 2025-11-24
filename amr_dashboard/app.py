@@ -5,36 +5,57 @@ import pandas as pd
 from sqlalchemy import create_engine, text, inspect
 import amr_dashboard.visualizations as viz
 from st_aggrid import AgGrid, GridOptionsBuilder
+from fpdf import FPDF
 
-def main():
-    # Add the parent directory (antibiotic-resistance-database/) to Python’s module search path
-    sys.path.append(str(Path(__file__).resolve().parent.parent))
+# ----------------------------
+# UTILITY FUNCTIONS
+# ----------------------------
+def clear_pheno_filters():
+    st.session_state["pheno_org"] = ""
+    st.session_state["pheno_ab"] = ""
+    st.session_state["pheno_region"] = ""
+    st.session_state["pheno_res"] = "All"
 
-    #db_path = Path(__file__).parent / "amr.db"  # points to amr_dashboard/amr.db
-    engine = create_engine(f"sqlite:///amr_dashboard/amr.db")
+def clear_geno_filters():
+    st.session_state["geno_org"] = ""
+    st.session_state["geno_mech"] = ""
+    st.session_state["geno_gene"] = ""
 
-    st.title("AMR Resistance Dashboard")
+def df_to_pdf(df, filename="export.pdf"):
+    pdf = FPDF()
+    pdf.set_auto_page_break(auto=True, margin=15)
+    pdf.add_page()
+    pdf.set_font("Arial", size=10)
 
-    #  TAB LAYOUT
-    tab1, tab2 = st.tabs(["Phenotype (Resistance Profiles)", "Genotype (CARD)"])
+    # Header row
+    for col in df.columns:
+        pdf.cell(40, 10, col, 1)
+    pdf.ln()
 
-    #  TAB 1 — PHENOTYPE DASHBOARD
-    with tab1:
-        st.header("Phenotypic Resistance Profiles")
+    # Table rows
+    for _, row in df.iterrows():
+        for item in row:
+            pdf.cell(40, 10, str(item), 1)
+        pdf.ln()
 
-        organism = st.text_input("Organism", key="pheno_org")
-        antibiotic = st.text_input("Antibiotic", key="pheno_ab")
-        region = st.text_input("Region", key="pheno_region")
+    pdf.output(filename)
+    return filename
 
-        # Radio buttons for resistance levels
-        resistance_levels = ["All", "susceptible", "intermediate", "resistant"]
-        selected_resistance = st.radio("Resistance Level", resistance_levels, horizontal=True)
+def download_buttons(df, prefix="results"):
+    # CSV
+    csv = df.to_csv(index=False).encode("utf-8")
+    st.download_button("Download CSV", csv, file_name=f"{prefix}.csv")
 
-        inspector = inspect(engine)
-        columns = inspector.get_columns("resistance_profiles")
-        for col in columns:
-            print(col["name"])
-        query = """
+    # PDF
+    pdf_file = df_to_pdf(df, filename=f"{prefix}.pdf")
+    with open(pdf_file, "rb") as f:
+        st.download_button("Download PDF", f, file_name=f"{prefix}.pdf")
+
+# ----------------------------
+# QUERY FUNCTIONS
+# ----------------------------
+def query_phenotype(engine, organism, antibiotic, region, selected_resistance):
+    query = """
         SELECT
             scientific_name AS Organism,
             antibiotic AS Antibiotic,
@@ -44,67 +65,26 @@ def main():
             year AS Year
         FROM resistance_profiles
         WHERE 1=1
-        """
+    """
+    params = {}
+    if organism:
+        query += " AND scientific_name = :organism"
+        params["organism"] = organism
+    if antibiotic:
+        query += " AND antibiotic = :antibiotic"
+        params["antibiotic"] = antibiotic
+    if region:
+        query += " AND location = :region"
+        params["region"] = region
+    if selected_resistance != "All":
+        query += " AND resistance_phenotype = :res_level"
+        params["res_level"] = selected_resistance
 
-        params = {}
-        if organism:
-            query += " AND scientific_name = :organism"
-            params["organism"] = organism
-        if antibiotic:
-            query += " AND antibiotic = :antibiotic"
-            params["antibiotic"] = antibiotic
-        if region:
-            query += " AND location = :region"
-            params["region"] = region
-        if selected_resistance != "All":
-            query += " AND resistance_phenotype = :res_level"
-            params["res_level"] = selected_resistance
-                
-        
-        with engine.connect() as conn:
-            df = pd.read_sql(text(query), conn, params=params)
+    with engine.connect() as conn:
+        return pd.read_sql(text(query), conn, params=params)
 
-        st.subheader("Query Results")
-        st.dataframe(df, use_container_width=True)
-
-        if df.empty:
-            st.info("No results found.")
-        else:
-            gb = GridOptionsBuilder.from_dataframe(df)
-            gb.configure_selection(selection_mode="single", use_checkbox=False)
-            grid_options = gb.build()
-
-            grid_response = AgGrid(
-                df,
-                gridOptions=grid_options,
-                enable_enterprise_modules=False,
-                update_mode="MODEL_CHANGED"
-            )
-
-            # Show description for clicked row
-            selected = grid_response['selected_rows']
-            if selected:
-                desc = selected[0].get('Description')
-                if desc:
-                    st.info(desc)
-
-            # Charts
-            viz.resistance_level_chart(df)
-            viz.trend_chart(df)
-            viz.geography_summary(df)
-            viz.antibiotic_frequency(df)
-            viz.organism_frequency(df)
-
-
-    #  TAB 2 — GENOTYPE DASHBOARD (CARD DATA)
-    with tab2:
-        st.header("Genotype-Based Resistance (CARD)")
-
-        organism2 = st.text_input("Organism", key="geno_org")
-        mechanism2 = st.text_input("Mechanism", key="geno_mech")
-        gene2 = st.text_input("Gene", key="geno_gene")
-
-        query2 = """
+def query_genotype(engine, organism, mechanism, gene):
+    query = """
         SELECT 
             Organism,
             gene,
@@ -113,42 +93,114 @@ def main():
             mechanism
         FROM card_genes
         WHERE 1=1
-        """
+    """
+    params = {}
+    if organism:
+        query += " AND Organism = :organism"
+        params["organism"] = organism
+    if mechanism:
+        query += " AND mechanism = :mechanism"
+        params["mechanism"] = mechanism
+    if gene:
+        query += " AND Gene = :gene"
+        params["gene"] = gene
 
-        params2 = {}
+    with engine.connect() as conn:
+        return pd.read_sql(text(query), conn, params=params)
 
-        if organism2:
-            query2 += " AND Organism = :organism"
-            params2["organism"] = organism2
+# ----------------------------
+# TAB FUNCTIONS
+# ----------------------------
+def phenotype_tab(engine):
+    st.header("Phenotypic Resistance Profiles")
+    organism = st.text_input("Organism", key="pheno_org")
+    antibiotic = st.text_input("Antibiotic", key="pheno_ab")
+    region = st.text_input("Region", key="pheno_region")
+    resistance_levels = ["All", "susceptible", "intermediate", "resistant"]
+    selected_resistance = st.radio("Resistance Level", resistance_levels, horizontal=True, key="pheno_res")
+    st.button("Clear Filters", on_click=clear_pheno_filters, key="clear_pheno")
 
-        if mechanism2:
-            query2 += " AND mechanism = :mechanism"
-            params2["mechanism"] = mechanism2
+    df = query_phenotype(engine, organism, antibiotic, region, selected_resistance)
 
-        if gene2:
-            query2 += " AND Gene = :gene"
-            params2["gene"] = gene2
+    st.subheader("Query Results")
+    st.dataframe(df, use_container_width=True)
 
-        with engine.connect() as conn:
-            df2 = pd.read_sql(text(query2), conn, params=params2)
+    if not df.empty:
+        download_buttons(df, prefix="phenotype_results")
 
-        st.subheader("Query Results")
-        st.dataframe(df2, use_container_width=True)
+        # AGGRID
+        gb = GridOptionsBuilder.from_dataframe(df)
+        gb.configure_selection(selection_mode="single", use_checkbox=False)
+        grid_options = gb.build()
+        grid_response = AgGrid(df, gridOptions=grid_options, update_mode="MODEL_CHANGED")
+        selected = grid_response['selected_rows']
+        if selected:
+            desc = selected[0].get('Description')
+            if desc:
+                st.info(desc)
 
-        if df2.empty:
-            st.info("No CARD gene results found.")
-        else:
-            # Easy way to select unique values
-            st.subheader("Explore Unique Values")
+        # Charts
+        viz.resistance_level_chart(df)
+        viz.trend_chart(df)
+        viz.geography_summary(df)
+        viz.antibiotic_frequency(df)
+        viz.organism_frequency(df)
+    else:
+        st.info("No results found.")
 
-            col = st.selectbox("Select a column to view unique values:", df2.columns)
+def genotype_tab(engine):
+    st.header("Genotype-Based Resistance (CARD)")
+    organism = st.text_input("Organism", key="geno_org")
+    mechanism = st.text_input("Mechanism", key="geno_mech")
+    gene = st.text_input("Gene", key="geno_gene")
+    st.button("Clear Filters", on_click=clear_geno_filters, key="clear_geno")
 
-            unique_vals = df2[col].dropna().unique().tolist()
-            st.write(unique_vals)
-            
-            viz.card_mechanism_summary(df2)
-            viz.card_drugclass_distribution(df2)
-            viz.card_gene_frequency(df2)
+    df = query_genotype(engine, organism, mechanism, gene)
+
+    st.subheader("Query Results")
+    st.dataframe(df, use_container_width=True)
+
+    if not df.empty:
+        download_buttons(df, prefix="genotype_results")
+
+        st.subheader("Explore Unique Values")
+        col = st.selectbox("Select a column to view unique values:", df.columns)
+        unique_vals = df[col].dropna().unique().tolist()
+        st.write(unique_vals)
+
+        # Charts
+        viz.card_mechanism_summary(df)
+        viz.card_drugclass_distribution(df)
+        viz.card_gene_frequency(df)
+    else:
+        st.info("No CARD gene results found.")
+
+# ----------------------------
+# MAIN
+# ----------------------------
+def main():
+    sys.path.append(str(Path(__file__).resolve().parent.parent))
+    engine = create_engine("sqlite:///amr_dashboard/amr.db")
+    st.title("AMR Resistance Dashboard")
+
+    # Initialize session state
+    defaults = {
+        "pheno_org": "",
+        "pheno_ab": "",
+        "pheno_region": "",
+        "pheno_res": "All",
+        "geno_org": "",
+        "geno_mech": "",
+        "geno_gene": "",
+    }
+    for key, val in defaults.items():
+        st.session_state.setdefault(key, val)
+
+    tab1, tab2 = st.tabs(["Phenotype (Resistance Profiles)", "Genotype (CARD)"])
+    with tab1:
+        phenotype_tab(engine)
+    with tab2:
+        genotype_tab(engine)
 
 if __name__ == "__main__":
     main()
