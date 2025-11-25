@@ -1,0 +1,1 @@
+I am very confident in my term project after completing this assignment. I have a detailed timeline that is helping me get through the project at an acceptable pace. This check-in showed me that even though I have a significant amount to complete for this project, I made a lot of progress in this first month.
