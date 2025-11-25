@@ -41,3 +41,10 @@ This dashboard allows users to:
 ```bash
 git clone https://github.com/csc505-f25/antibiotic-resistance-database.git
 cd antibiotic-resistance-database
+```
+
+2. **Run the run_app.sh script.**
+
+```bash
+./run_app.sh
+```
